@@ -8,12 +8,12 @@ namespace WPFUINumberBoxBugDemo.ViewModels.Pages
     public partial class DashboardViewModel : ObservableObject
     {
         [ObservableProperty]
-        private int _counter = 0;
+        private int? value;
 
         [RelayCommand]
-        private void OnCounterIncrement()
+        private void SetValue()
         {
-            Counter++;
+            Value = 20;
         }
     }
 }

@@ -17,9 +17,9 @@
     mc:Ignorable="d">
 
     <StackPanel>
-        <ui:NumberBox x:Name="TEST" MinWidth="100" />
+        <ui:NumberBox x:Name="TEST" MinWidth="100" Value="{Binding ViewModel.Value, UpdateSourceTrigger=LostFocus}" />
         <ui:Button
-            Click="Button_Click"
+            Command="{Binding ViewModel.SetValueCommand}"
             Content="Click me!" />
     </StackPanel>
 </Page>
