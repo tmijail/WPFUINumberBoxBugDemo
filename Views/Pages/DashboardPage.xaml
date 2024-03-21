@@ -21,5 +21,23 @@
         <ui:Button
             Command="{Binding ViewModel.SetValueCommand}"
             Content="Click me!" />
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0">
+                <TextBlock Text="Text" />
+                <TextBlock Text="Value" />
+                <TextBlock Text="ViewModel" />
+            </StackPanel>
+
+            <StackPanel Grid.Column="1">
+                <TextBlock Text="{Binding ElementName=TEST, Path=Text, Mode=OneWay}" />
+                <TextBlock Text="{Binding ElementName=TEST, Path=Value, Mode=OneWay}" />
+                <TextBlock Text="{Binding ViewModel.Value, Mode=OneWay}" />
+            </StackPanel>
+        </Grid>
+        
     </StackPanel>
 </Page>
